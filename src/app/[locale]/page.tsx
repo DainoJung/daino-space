@@ -3,6 +3,7 @@ import { Link } from "@/i18n/routing";
 import { getBlogPosts } from "@/lib/notion";
 import { getProjects } from "@/lib/projects";
 import { Newsletter } from "@/components/Newsletter";
+import { FadeIn } from "@/components/FadeIn";
 import type { BlogPost } from "@/lib/notion";
 import type { Project } from "@/lib/projects";
 
@@ -31,33 +32,35 @@ function HomeContent({
   return (
     <div className="space-y-20">
       {/* Hero */}
-      <section className="pt-8 space-y-10">
-        <div>
-          <h1 className="text-[clamp(3rem,8vw,5rem)] font-black tracking-tight leading-none mb-4">
-            {t("name")}
-          </h1>
-          <div className="flex items-center justify-between text-sm font-semibold">
-            <span>{t("role")}</span>
-            <span>
-              <span className="mr-1">📍</span>
-              {t("location")}
-            </span>
+      <FadeIn>
+        <section className="pt-8 space-y-10">
+          <div>
+            <h1 className="text-[clamp(3rem,8vw,5rem)] font-black tracking-tight leading-none mb-4">
+              {t("name")}
+            </h1>
+            <div className="flex items-center justify-between text-sm font-semibold">
+              <span>{t("role")}</span>
+              <span>
+                <span className="mr-1">📍</span>
+                {t("location")}
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div className="space-y-6 text-[15px] leading-[1.8]">
-          <p>{t("bio1")}</p>
-          <p>
-            {t("bio2_prefix")}
-            <strong>{t("bio2_bold")}</strong>
-            {t("bio2_suffix")}
-          </p>
-          <p>{t("bio3")}</p>
-        </div>
-      </section>
+          <div className="space-y-6 text-[15px] leading-[1.8]">
+            <p>{t("bio1")}</p>
+            <p>
+              {t("bio2_prefix")}
+              <strong>{t("bio2_bold")}</strong>
+              {t("bio2_suffix")}
+            </p>
+            <p>{t("bio3")}</p>
+          </div>
+        </section>
+      </FadeIn>
 
       {/* Latest Projects */}
-      <section>
+      <FadeIn delay={100}><section>
         <SectionHeader title={t("latestProjects")}>
           <Link
             href="/work"
@@ -78,10 +81,10 @@ function HomeContent({
             />
           ))}
         </div>
-      </section>
+      </section></FadeIn>
 
       {/* Latest Posts */}
-      <section>
+      <FadeIn delay={200}><section>
         <SectionHeader title={t("latestPosts")}>
           <Link
             href="/blog"
@@ -115,10 +118,12 @@ function HomeContent({
             Coming soon...
           </p>
         )}
-      </section>
+      </section></FadeIn>
 
       {/* Newsletter */}
-      <Newsletter />
+      <FadeIn delay={300}>
+        <Newsletter />
+      </FadeIn>
     </div>
   );
 }
