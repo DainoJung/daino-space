@@ -56,9 +56,17 @@ export default async function WorkDetailPage({
       {/* Hero Image */}
       <section>
         <div className="aspect-[16/9] rounded-xl overflow-hidden bg-[#f0e6ff] dark:bg-surface-dark border border-border-light dark:border-border-dark">
-          <div className="w-full h-full flex items-center justify-center text-muted-light dark:text-muted-dark">
-            <span className="text-sm font-mono">{project.title}</span>
-          </div>
+          {project.thumbnail ? (
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-muted-light dark:text-muted-dark">
+              <span className="text-sm font-mono">{project.title}</span>
+            </div>
+          )}
         </div>
       </section>
 

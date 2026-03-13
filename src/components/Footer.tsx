@@ -17,7 +17,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t border-border-light dark:border-border-dark">
-      <div className="max-w-container mx-auto px-6 py-6 flex items-center justify-between text-sm">
+      <div className="max-w-[880px] mx-auto px-6 py-6 flex items-center justify-between text-sm">
         <span className="text-muted-light dark:text-muted-dark">
           {t("footer.copyright", { year })}
         </span>

@@ -38,9 +38,17 @@ export default async function WorkPage() {
               className="group block"
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-4 relative">
-                <div className="absolute top-3 left-3 text-xs font-mono text-white/60">
-                  {project.year}
-                </div>
+                {project.thumbnail ? (
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="absolute top-3 left-3 text-xs font-mono text-white/60">
+                    {project.year}
+                  </div>
+                )}
               </div>
               <h3 className="font-semibold mb-1 group-hover:text-accent transition-colors">
                 {project.title}

@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-bg-light/80 dark:bg-bg-dark/80 backdrop-blur-md">
-      <div className="max-w-container mx-auto px-6 h-14 flex items-center justify-between">
+      <div className="max-w-[880px] mx-auto px-6 h-14 flex items-center justify-between">
         {/* Left: Logo + Nav */}
         <div className="flex items-center gap-4">
           <Link

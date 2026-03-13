@@ -6,8 +6,8 @@ export function Newsletter() {
   const t = useTranslations("newsletter");
 
   return (
-    <section className="flex flex-col sm:flex-row gap-8 items-center rounded-2xl bg-surface-light dark:bg-surface-dark p-8 sm:p-10">
-      <div className="w-full sm:w-1/3 aspect-square rounded-xl overflow-hidden bg-border-light dark:bg-border-dark">
+    <section className="flex flex-col sm:flex-row gap-5 items-center rounded-xl bg-surface-light dark:bg-surface-dark p-5 sm:p-6">
+      <div className="w-full sm:w-1/4 aspect-square rounded-lg overflow-hidden bg-border-light dark:bg-border-dark">
         <img
           src="/newsletter.jpg"
           alt=""
@@ -19,7 +19,7 @@ export function Newsletter() {
       </div>
       <div className="flex-1 space-y-4">
         <h2 className="text-2xl font-bold">{t("title")}</h2>
-        <div className="space-y-3">
+        <div className="space-y-3 w-3/4">
           <form
             onSubmit={(e) => e.preventDefault()}
             className="flex gap-2"

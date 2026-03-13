@@ -74,6 +74,7 @@ function HomeContent({
               description={project.description}
               year={project.year}
               href={`/work/${project.slug}`}
+              thumbnail={project.thumbnail}
             />
           ))}
         </div>
@@ -145,18 +146,28 @@ function ProjectCard({
   description,
   year,
   href,
+  thumbnail,
 }: {
   title: string;
   description: string;
   year: string;
   href: string;
+  thumbnail?: string | null;
 }) {
   return (
     <Link href={href} className="group block">
       <div className="aspect-[4/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-4 relative">
-        <div className="absolute top-3 left-3 text-xs font-mono text-white/60">
-          {year}
-        </div>
+        {thumbnail ? (
+          <img
+            src={thumbnail}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="absolute top-3 left-3 text-xs font-mono text-white/60">
+            {year}
+          </div>
+        )}
       </div>
       <h3 className="font-semibold mb-1 group-hover:text-accent transition-colors">
         {title}

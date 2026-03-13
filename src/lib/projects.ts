@@ -17,6 +17,7 @@ export interface Project {
   year: string;
   description: string;
   order: number;
+  thumbnail: string | null;
 }
 
 function getProperty(page: PageObjectResponse, name: string) {
@@ -52,7 +53,15 @@ function extractProject(page: PageObjectResponse): Project {
   const order =
     orderProp?.type === "number" ? orderProp.number ?? 99 : 99;
 
-  return { id: page.id, title, slug, year, description, order };
+  const thumbProp = getProperty(page, "Thumbnail");
+  let thumbnail: string | null = null;
+  if (thumbProp?.type === "files" && thumbProp.files.length > 0) {
+    const file = thumbProp.files[0];
+    thumbnail =
+      file.type === "external" ? file.external.url : file.file.url;
+  }
+
+  return { id: page.id, title, slug, year, description, order, thumbnail };
 }
 
 export async function getProjects(): Promise<Project[]> {
