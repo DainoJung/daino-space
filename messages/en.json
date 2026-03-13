@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "blog": "Blog"
+  },
+  "home": {
+    "name": "Dain Jung",
+    "role": "Builder - Obscura",
+    "location": "South Korea, Seoul",
+    "bio1": "Hi there! I'm a Builder and AI Product Specialist based in Korea. With experience across data-driven SaaS work and ERP-focused AI Agent development, I'm passionate about turning complex information into intuitive, accessible experiences.",
+    "bio2_prefix": "These days, I'm focused on ",
+    "bio2_bold": "AI-powered content automation and multi-channel publishing",
+    "bio2_suffix": ", exploring how creators and teams can achieve more with less effort.",
+    "bio3": "In my free time, I enjoy reading and collecting new perspectives that inspire how I design and shape better product experiences.",
+    "latestProjects": "Latest Projects",
+    "latestPosts": "Latest Posts",
+    "viewAll": "View all"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Constantly Challenging Myself to Nudge the World 0.1° in a Positive Direction.",
+    "intro": "Hello, I am Daino, a Builder who defines problems and experiments with solutions. I focus on the \"Value\" technology creates rather than the technology itself. I feel the greatest happiness when something I've built touches someone's life and provides real help."
+  },
+  "work": {
+    "title": "My Work",
+    "description1": "My work begins with the intention to build products that are intelligent, meaningful, and genuinely useful. With experience across data-driven SaaS, AI agents, and product experimentation, I focus on reshaping complex problems into simple and clear user experiences. Above all, I prioritize defining ",
+    "description1_italic1": "what problem to solve",
+    "description1_mid": " before deciding ",
+    "description1_italic2": "how to solve it",
+    "allProjects": "All Projects",
+    "loadMore": "Load More",
+    "outroStart": "Curiosity and a desire to explore new possibilities guide my approach. Whether I'm designing AI workflows, refining product experiences, or structuring early-stage concepts, my goal is to create work that delivers real value in the real world. This principle shapes everything I build.",
+    "outroEnd": "If you'd like to connect for work queries or collaborations, please do ",
+    "getInTouch": "get in touch",
+    "outroEnd2": ". I also write a weekly newsletter to share my experiences. Do join if you'd like to read more about my adventures."
+  },
+  "blog": {
+    "title": "My Blog",
+    "description1": "This space is where I document what I'm learning and building. I share reflections from my journey in AI, product development, and data work, along with perspectives shaped by the books that continue to expand my curiosity.",
+    "description2": "As technology and creativity evolve rapidly, I use this space to capture the decisions, questions, and insights that shape my path. I hope these notes offer a spark of inspiration for anyone exploring a similar direction.",
+    "allPosts": "All Posts",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog",
+    "publishedOn": "Published on",
+    "noPosts": "No posts yet. Check back soon!"
+  },
+  "newsletter": {
+    "title": "Subscribe to my Newsletter",
+    "description": "Sign up to stay updated about my latest work and adventures. ",
+    "disclaimer": "No Spam, No BS. Promise!",
+    "placeholder": "name@email.com",
+    "subscribe": "Subscribe"
+  },
+  "footer": {
+    "copyright": "© Dain Jung | {year}"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong."
+  }
+}
